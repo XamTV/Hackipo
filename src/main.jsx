@@ -8,6 +8,8 @@ import Home from "./pages/Home.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import EventList from "./pages/EventList.jsx";
 import Event from "./pages/Event.jsx";
+import NousContacter from "./pages/NousContacter.jsx";
+import PolitiqueConf from "./pages/PolitiqueConf.jsx";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,14 @@ const router = createBrowserRouter([
       {
         path: "/event/:id",
         element: <Event />,
+      },
+      {
+        path: "/nouscontacter",
+        element: <NousContacter />,
+      },
+      {
+        path: "/politiquedeconfidentialité",
+        element: <PolitiqueConf />,
       },
     ],
   },

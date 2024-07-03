@@ -1,9 +1,11 @@
-function Event() {
-  return (
-    <section className="EventComponent">
-      <h1>Event</h1>
+import { useLocation } from "react-router-dom";
 
-      <p>Event Component</p>
+function Event() {
+  const location = useLocation();
+  const { member } = location.state;
+  return (
+    <section>
+      <h1>{member.name} </h1>
     </section>
   );
 }
