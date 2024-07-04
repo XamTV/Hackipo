@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import "../styles/NavBar.css";
 import logoNav from "../assets/logoNav.webp";
+import profil from "../assets/profil.png";
 import axios from "axios";
 
 function NavBar() {
@@ -38,11 +39,13 @@ function NavBar() {
         <input
           className="Search"
           type="text"
-          placeholder="Chercher un évenement &#128269;"
+          placeholder="Chercher un évenement"
           value={searchInput}
           onChange={handleSearchInputChange}
         />
+         <img src={profil} alt="logo utilisateur" />
       </nav>
+     
     </section>
   );
 }
