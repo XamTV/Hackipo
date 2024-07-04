@@ -1,15 +1,75 @@
 .NavBarComponent {
-  display: flex;
   background-color: var(--first-color);
-  .logo-nav {
-    width: 150px;
-  }
-  nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    background-color: var(--first-color);
-  }
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.logo-nav {
+  width: 120px;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  font-weight: 600;
+}
+
+.Search {
+  background-color: #d4d1d1;
+  border: 1px solid var(--first-color);
+  border-radius: 5px;
+  padding: 10px;
+  width: 250px;
+  color: var(--third-color);
+  outline: none;
+}
+
+.Search::placeholder {
+  color: var(--third-color);
+}
+
+.Search:focus {
+  border: 1px solid var(--first-color);
+}
+
+.Search {
+  background-image: url("../assets/loupe.png");
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  font-size: 16px;
+}
+
+.Search::placeholder {
+  color: #727272;
+}
+
+#categorie-selection {
+  background-color: var(--first-color);
+  border: 1px solid var(--first-color);
+  border-radius: 5px;
+  padding: 10px;
+  color: var(--third-color);
+  outline: none;
+  width: 120px;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--third-color);
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--second-color);
+  text-decoration: underline;
 }
