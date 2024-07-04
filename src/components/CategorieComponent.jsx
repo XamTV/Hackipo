@@ -41,6 +41,7 @@ function CategorieComponent() {
             </Link>
           </section>
         ))}
+        
       </section>
     </>
   );

@@ -31,6 +31,7 @@ function About() {
             </div>
           ))}
         </div>
+        <hr className="line"/>
       </section>
     </>
   );
