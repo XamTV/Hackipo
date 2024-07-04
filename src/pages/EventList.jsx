@@ -2,7 +2,7 @@ import { Link, useLocation, useParams } from "react-router-dom";
 
 import { useEffect, useState } from "react";
 import axios from "axios";
-
+import Form from "../components/Form.jsx";
 import "../styles/EventList.css";
 
 function EventList() {
@@ -55,6 +55,7 @@ function EventList() {
           </section>
         </>
       ))}
+      <Form />
     </>
   );
 }

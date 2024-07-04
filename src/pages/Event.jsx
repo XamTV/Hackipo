@@ -2,6 +2,10 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
 
+import Form from "../components/Form.jsx";
+
+import "../styles/Event.css";
+
 function Event() {
   const location = useLocation();
   const { detail } = location.state;
@@ -21,24 +25,46 @@ function Event() {
     <>
       {eventDetails?.map((event) => (
         <section key={event.id} className="EventComponent">
-          <header>
-            <img src={detail.image} alt="lol" />
-            <h1>{detail.titre} </h1>
-            <h2>{event.titre} </h2>
-            <p>{event.date} </p>
+          <header
+            className={`event-container background-${event.id_categorie}`}
+          >
+            <div className="title-pic">
+              <img src={detail.image} alt="pictogramme de la categorie" />
+              <h1 className="event-title">{detail.titre} </h1>
+            </div>
+            <h2 className="second-event-title">{event.titre} </h2>
+            <p className="first-para-event">{event.date} </p>
           </header>
+          <section className="event-description">
+            <p className="para-event">{event.descr} </p>
+            <img src={event.image} alt="image lié a l'evenement" />
+          </section>
+          <hr className={`advice-line line-${event.id_categorie}`} />
           <section className="advice-list">
-            <img src={event.image} alt="" />
-            <p>{event.descr} </p>
-            <h1>Conseils pour une Célébration Engagée et Inclusive</h1>
-            <ol>
-              {Object.values(event.conseil).map((conseil) => (
-                <li key={conseil.id}>{conseil.nom} </li>
-              ))}
-            </ol>
+            <h1 className="second-title-event">
+              Conseils pour une Célébration Engagée et Inclusive
+            </h1>
+            <div className="li-component">
+              <ol>
+                {Object.values(event.conseil).map((conseil) => (
+                  <>
+                    <li
+                      className={`color-${event.id_categorie}`}
+                      key={conseil.id}
+                    >
+                      {conseil.nom}{" "}
+                    </li>
+                    <hr
+                      className={`advice-line-list line-${event.id_categorie}`}
+                    />
+                  </>
+                ))}
+              </ol>
+            </div>
           </section>
         </section>
       ))}
+      <Form />
     </>
   );
 }

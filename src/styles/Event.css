@@ -1,1 +1,116 @@
+.event-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-self: center;
+  padding: 2rem 3rem;
+  color: var(--first-color);
+}
+.event-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem 3rem;
+}
+.event-description img {
+  max-width: 500px;
+  margin: 2rem 0rem 2rem 6rem;
+  border-radius: 10px;
+}
+.para-event {
+  max-width: 70ch;
+}
 
+.event-title {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.title-pic {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.title-pic img {
+  width: 70px;
+}
+.second-event-title {
+  font-weight: 400;
+  padding-left: 0.5rem;
+}
+.first-para-event {
+  font-weight: bold;
+  padding-left: 0.5rem;
+}
+
+.advice-line {
+  width: 40vw;
+}
+
+.advice-list {
+  padding-left: 3rem;
+}
+
+.li-component {
+  .color-1::marker {
+    font-size: 3rem;
+    color: var(--fourth-color);
+  }
+  .color-2::marker {
+    font-size: 3rem;
+    color: var(--fifth-color);
+  }
+  .color-3::marker {
+    font-size: 3rem;
+    color: var(--sixth-color);
+  }
+  .color-4::marker {
+    font-size: 3rem;
+    color: var(--seventh-color);
+  }
+}
+
+.advice-list ol {
+  padding-left: 3rem;
+  max-width: 60ch;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.second-title-event {
+  font-size: 1.5rem;
+  color: var(--second-color);
+}
+
+.line-1 {
+  border-bottom: 1.5px solid var(--fourth-color);
+}
+.line-2 {
+  border-bottom: 1.5px solid var(--fifth-color);
+}
+.line-3 {
+  border-bottom: 1.5px solid var(--sixth-color);
+}
+.line-4 {
+  border-bottom: 1.5px solid var(--seventh-color);
+}
+
+.background-1 {
+  background-color: var(--fourth-color); /* Couleur personnalisée pour l'ID 1 */
+}
+
+.background-2 {
+  background-color: var(--fifth-color); /* Couleur personnalisée pour l'ID 2 */
+}
+
+.background-3 {
+  background-color: var(--sixth-color); /* Couleur personnalisée pour l'ID 2 */
+}
+
+.background-4 {
+  background-color: var(
+    --seventh-color
+  ); /* Couleur personnalisée pour l'ID 2 */
+}

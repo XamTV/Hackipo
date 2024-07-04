@@ -1,0 +1,97 @@
+.form-component {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--second-color);
+  padding: 20px;
+}
+
+.text-container {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  background-color: var(--fifth-color);
+  padding-left: 3rem;
+}
+
+.text-container h1 {
+  font-size: 2em;
+  color: #333;
+}
+
+.text-container h2 {
+  font-size: 1.5em;
+  color: #666;
+}
+
+.text-container p {
+  font-size: 1.1em;
+  color: #777;
+  margin-bottom: 20px;
+  
+}
+
+.form-container {
+  flex: 1;
+  min-width: 300px;
+  background-color: var(--second-color);
+  padding: 20px;
+}
+.form-container-2 {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+
+form input,
+form textarea {
+  width: calc(100% - 20px);
+  background-color: var(--first-color);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.checkbox-container {
+  margin-bottom: 20px;
+}
+
+.checkbox-container label {
+  display: block;
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.checkbox-container input {
+  margin-right: 10px;
+}
+
+.button-form {
+  background-color: var(--first-color);
+  color: var(--second-color);
+  padding: 1rem 4.5rem 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-image: url("../assets/arrow.png");
+  background-position: right 22px center;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+}
+
+.button-form:hover {
+  background-color: var(--first-color);
+}
