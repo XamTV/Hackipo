@@ -6,18 +6,17 @@ function Footer() {
     <>
       <div className="FooterComponent">
         <div>
-          <img src="../src/assets/Default_white.png" alt="" />
+          <img src="../src/assets/Default_white.png" alt="logo du site" />
         </div>
         <div className="contactez-nous">
           <h3>Contactez-nous</h3>
-          <p>
-            Adresse <br /> 31200 Toulouse
-            <br /> +33 12 34 56 78 90
-            <br /> Contact-nom@gmail.com
-          </p>
+          <p>Adresse</p>
+          <p>31200 Toulouse</p>
+          <p>+33 12 34 56 78 90</p>
+          <p>Contact-nom@gmail.com</p>
         </div>
         <div className="link">
-          <h3>Plus d'information</h3>
+          <h3>Plus d&apos;information</h3>
           <Link to={`/categorie`}>
             <p>Catégorie</p>
           </Link>

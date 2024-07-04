@@ -1,13 +1,21 @@
 .FooterComponent {
-  background-color: #40595e;
-  color: white;
+  background-color: var(--second-color);
+  color: var(--first-color);
   width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   gap: 1rem;
+  font-size: 13px;
+  padding: 2rem;
 }
 
 .FooterComponent a {
-  color: white;
+  color: var(--first-color);
   text-decoration: none;
+}
+
+.FooterComponent img {
+  width: 200px;
 }
