@@ -9,28 +9,6 @@
   padding: 20px;
 }
 
-.EventListComponent::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background-color: var(--fifth-color); /* Couleur personnalisée */
-  z-index: -1;
-}
-
-.EventListComponent::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background-color: var(--first-color); /* Couleur personnalisée */
-  z-index: -1;
-}
-
 .EventListComponent img {
   max-height: 300px;
   border-radius: 8px;
@@ -44,9 +22,9 @@
 }
 
 .header-content h1 {
-  font-size: 2em;
+  font-size: 40px;
   margin: 0;
-  color: black; /* Couleur du texte */
+  color: var(--second-color);
 }
 
 .header-content p {
@@ -63,20 +41,25 @@
 
 /* Styles pour EventListContainer */
 .EventListContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   margin: auto;
-  padding: 20px;
+  margin-top: 2rem;
+  padding: 0 4rem;
   background-color: var(--first-color);
 }
 
 .EventListContainer h1 {
-  font-size: 1.8em;
-  margin-bottom: 10px;
-  color: #333;
+  font-size: 36px;
+  font-weight: bold;
+
+  color: var(--second-color);
 }
 
 .EventListContainer p {
   font-size: 1.1em;
-  margin-bottom: 20px;
+
   color: #777;
 }
 
@@ -88,8 +71,7 @@
 
 .EventListContainer li {
   background-color: white;
-  width: 90vw;
-  margin: auto;
+  font-weight: bold;
   padding: 15px;
   margin-bottom: 3rem;
   border-radius: 8px;
@@ -97,27 +79,121 @@
   justify-content: space-between;
   align-items: center;
   transition: background-color 0.3s ease;
+  box-shadow: 2px 2px 5px rgb(123, 123, 123);
 }
 
-.EventListContainer li a {
+.EventListContainer li .button-1 {
   text-decoration: none;
+  background-color: var(--fourth-color);
   color: var(--first-color);
+  padding: 0.6rem 4rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.EventListContainer li .button-2 {
+  text-decoration: none;
+  background-color: var(--fifth-color);
+  color: var(--second-color);
+  padding: 0.6rem 4rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.EventListContainer li .button-3 {
+  text-decoration: none;
+  background-color: var(--sixth-color);
+  color: var(--first-color);
+  padding: 0.6rem 4rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.EventListContainer li .button-4 {
+  text-decoration: none;
+  background-color: var(--seventh-color);
+  color: var(--second-color);
+  padding: 0.6rem 4rem;
+  border-radius: 5px;
   font-weight: bold;
 }
 
-.EventListContainer li a:hover {
+.EventListContainer li .button:hover {
   text-decoration: underline;
+  background-color: var(--first-color);
+  color: black;
 }
 
-.button {
-  padding: 10px 15px;
-  background-color: #007bff;
-  color: white;
+.line-1 {
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  border-bottom: 1.5px solid var(--fourth-color);
+  width: 30vw;
+  margin-left: 80rem;
+}
+.line-2 {
+  border: none;
+  border-bottom: 1.5px solid var(--fifth-color);
+  width: 30vw;
+  margin-left: 80rem;
+}
+.line-3 {
+  border: none;
+  border-bottom: 1.5px solid var(--sixth-color);
+  width: 30vw;
+  margin-left: 80rem;
+}
+.line-4 {
+  border: none;
+  border-bottom: 1.5px solid var(--seventh-color);
+  width: 30vw;
+  margin-left: 80rem;
 }
 
-.button:hover {
-  background-color: #0056b3;
+.EventListComponent::before,
+.EventListComponent::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.EventListComponent::before {
+  top: 0;
+  height: 50%;
+}
+
+.EventListComponent::after {
+  bottom: 0;
+  height: 50%;
+}
+
+/* Classes dynamiques pour les couleurs */
+.background-1::before {
+  background-color: var(--fourth-color); /* Couleur personnalisée pour l'ID 1 */
+}
+
+.background-1::after {
+  background-color: var(--first-color); /* Couleur personnalisée pour l'ID 1 */
+}
+
+.background-2::before {
+  background-color: var(--fifth-color); /* Couleur personnalisée pour l'ID 2 */
+}
+
+.background-2::after {
+  background-color: var(--first-color); /* Couleur personnalisée pour l'ID 2 */
+}
+
+.background-3::before {
+  background-color: var(--sixth-color); /* Couleur personnalisée pour l'ID 2 */
+}
+.background-3::after {
+  background-color: var(--first-color); /* Couleur personnalisée pour l'ID 2 */
+}
+
+.background-4::before {
+  background-color: var(
+    --seventh-color
+  ); /* Couleur personnalisée pour l'ID 2 */
+}
+.background-4::after {
+  background-color: var(--first-color); /* Couleur personnalisée pour l'ID 2 */
 }
