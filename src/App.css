@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap");
+
+:root {
+  --first-color: #f5f0f0;
+  --second-color: #40595e;
+  --third-color: #161425;
+  --fourth-color: #d66962;
+  --fifth-color: #ced1bd;
+  --sixth-color: #9ca0c2;
+  --seventh-color: #e2c7cc;
+  --text-shadow: 1px 1px 2px black;
+  --primary-font: "Quicksand", sans-serif;
+  --secondary-font: "Open Sans", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--third-color);
+  margin: 0;
+}

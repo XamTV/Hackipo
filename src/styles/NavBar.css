@@ -1,0 +1,15 @@
+.NavBarComponent {
+  display: flex;
+  background-color: var(--first-color);
+  .logo-nav {
+    width: 150px;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: var(--first-color);
+  }
+}
