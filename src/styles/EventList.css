@@ -1,0 +1,123 @@
+/* Styles pour EventListComponent */
+.EventListComponent {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  position: relative;
+  color: black; /* Couleur du texte */
+  padding: 20px;
+}
+
+.EventListComponent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: var(--fifth-color); /* Couleur personnalisée */
+  z-index: -1;
+}
+
+.EventListComponent::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: var(--first-color); /* Couleur personnalisée */
+  z-index: -1;
+}
+
+.EventListComponent img {
+  max-height: 300px;
+  border-radius: 8px;
+  margin-right: 20px;
+  z-index: 1; /* Assure que l'image est au-dessus des pseudo-éléments */
+}
+
+.header-content {
+  margin-left: 20px;
+  max-width: 600px;
+}
+
+.header-content h1 {
+  font-size: 2em;
+  margin: 0;
+  color: black; /* Couleur du texte */
+}
+
+.header-content p {
+  font-size: 1.2em;
+  margin-top: 4rem;
+  color: black; /* Couleur du texte */
+}
+
+.eventlist-logo {
+  height: 600px;
+  margin-left: 20px;
+  z-index: 1000; /* Assure que le logo est au-dessus des pseudo-éléments */
+}
+
+/* Styles pour EventListContainer */
+.EventListContainer {
+  margin: auto;
+  padding: 20px;
+  background-color: var(--first-color);
+}
+
+.EventListContainer h1 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.EventListContainer p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  color: #777;
+}
+
+.EventListContainer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.EventListContainer li {
+  background-color: white;
+  width: 90vw;
+  margin: auto;
+  padding: 15px;
+  margin-bottom: 3rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.EventListContainer li a {
+  text-decoration: none;
+  color: var(--first-color);
+  font-weight: bold;
+}
+
+.EventListContainer li a:hover {
+  text-decoration: underline;
+}
+
+.button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
