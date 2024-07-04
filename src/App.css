@@ -12,6 +12,7 @@
   --text-shadow: 1px 1px 2px black;
   --primary-font: "Quicksand", sans-serif;
   --secondary-font: "Open Sans", sans-serif;
+  --drop-shadow: drop-shadow(2px 2px 5px rgb(123, 123, 123));
 }
 
 *,
