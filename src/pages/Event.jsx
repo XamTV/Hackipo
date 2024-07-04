@@ -4,7 +4,7 @@ import { useLocation, useParams } from "react-router-dom";
 
 function Event() {
   const location = useLocation();
-  const { event } = location.state;
+  const { detail } = location.state;
 
   const { id } = useParams();
 
@@ -18,21 +18,28 @@ function Event() {
   }, [eventDetails, id]);
 
   return (
-    <section>
-      <h1>{event.nom} </h1>
-      <h2>Choses a mettre en place au sein de l&apos;entreprise</h2>
-      <ol>
-        {eventDetails?.map((event) => (
-          <>
-            {Object.values(event.conseil).map((conseil) => (
-              <section key={conseil.id}>
-                <li>{conseil.nom} </li>
-              </section>
-            ))}
-          </>
-        ))}
-      </ol>
-    </section>
+    <>
+      {eventDetails?.map((event) => (
+        <section key={event.id} className="EventComponent">
+          <header>
+            <img src={detail.image} alt="lol" />
+            <h1>{detail.titre} </h1>
+            <h2>{event.nom} </h2>
+            <p>{event.date} </p>
+          </header>
+          <section className="advice-list">
+            <img src={event.image} alt="" />
+            <p>{event.descr} </p>
+            <h1>Conseils pour une Célébration Engagée et Inclusive</h1>
+            <ol>
+              {Object.values(event.conseil).map((conseil) => (
+                <li key={conseil.id}>{conseil.nom} </li>
+              ))}
+            </ol>
+          </section>
+        </section>
+      ))}
+    </>
   );
 }
 
