@@ -1,6 +1,6 @@
 function PolitiqueConf() {
   return (
-    <div className="PolitiqueConf">
+    <div>
       <h2>Polique de Confidentialité</h2>
       <h3>Collecte des informations personnelles</h3>
       <p>
