@@ -24,7 +24,7 @@ function Event() {
           <header>
             <img src={detail.image} alt="lol" />
             <h1>{detail.titre} </h1>
-            <h2>{event.nom} </h2>
+            <h2>{event.titre} </h2>
             <p>{event.date} </p>
           </header>
           <section className="advice-list">
