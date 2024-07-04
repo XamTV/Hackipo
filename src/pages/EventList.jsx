@@ -15,31 +15,39 @@ function EventList() {
       setCategoryDetails(Object.values(res.data));
     });
   }, [id]);
-
+  console.log(categoryDetails);
   return (
     <>
-      <section className="EventListComponent">
-        <h1>{category.titre} </h1>
-        <p>{category.descr}</p>
-      </section>
-      <section>
-        <h1>Liste des événements</h1>
-        <ul>
-          {categoryDetails?.map((detail) => (
-            <>
-              {Object.values(detail.liste_event).map((event) => (
-                <Link
-                  to={`/event/${event.id_event}`}
-                  key={event.id_event}
-                  state={{ event }}
-                >
-                  {event.nom}
-                </Link>
-              ))}
-            </>
-          ))}
-        </ul>
-      </section>
+      {categoryDetails?.map((detail) => (
+        <>
+          <section className="EventListComponent">
+            <h1>{category.titre} </h1>
+            <img src={detail.logo} alt="" />
+            <img src={category.image} alt="" />
+            <p>{category.descr}</p>
+          </section>
+          <section>
+            <h1>Liste des événements</h1>
+            <p>
+              Cliquez sur chaque évènement pour explorer nos conseils pratiques
+              et ressources dédiés.{" "}
+            </p>
+            <ul>
+              <>
+                {Object.values(detail.liste_event).map((event) => (
+                  <li key={event.id}>
+                    {event.nom} - {event.date}
+                    <Link to={`/event/${event.id_event}`} state={{ detail }}>
+                      {" "}
+                      En savoir plus
+                    </Link>{" "}
+                  </li>
+                ))}
+              </>
+            </ul>
+          </section>
+        </>
+      ))}
     </>
   );
 }
