@@ -1,4 +1,4 @@
-import { useLocation, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -13,8 +13,6 @@ function EventList() {
   useEffect(() => {
     axios.get(`http://62.35.135.195:5000/get/cat${id}`).then((res) => {
       setCategoryDetails(Object.values(res.data));
-
-      console.log();
     });
   }, [categoryDetails, id]);
 
@@ -26,7 +24,21 @@ function EventList() {
       </section>
       <section>
         <h1>Liste des événements</h1>
-        <ul></ul>
+        <ul>
+          {categoryDetails?.map((detail) => (
+            <>
+              {Object.values(detail.liste_event).map((event) => (
+                <Link
+                  to={`/event/${event.id_event}`}
+                  key={event.id_event}
+                  state={{ event }}
+                >
+                  {event.nom}
+                </Link>
+              ))}
+            </>
+          ))}
+        </ul>
       </section>
     </>
   );

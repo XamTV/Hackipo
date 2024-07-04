@@ -1,30 +1,40 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
-function NavBar({ projects }) {
+import "../styles/NavBar.css";
+import logoNav from "../assets/logoNav.webp";
+import axios from "axios";
+
+function NavBar() {
   const [searchInput, setSearchInput] = useState("");
-  const navigate = useNavigate();
+  const [categorieData, setCategorieData] = useState([{}]);
+
+  useEffect(() => {
+    axios.get(`http://62.35.135.195:5000/get/categorie`).then((res) => {
+      setCategorieData(Object.values(res.data));
+    });
+  }, []);
 
   const handleSearchInputChange = (event) => {
     setSearchInput(event.target.value);
   };
-  console.log("navbar", projects);
+
   return (
     <section className="NavBarComponent">
+      <img src={logoNav} alt="logo Harmonia" className="logo-nav" />
       <nav>
         <Link to="/"> Accueil </Link>
-        <select
-          onChange={(e) => navigate(`/categorie/${e.target.value}`)}
-          name="categorie-selection"
-          id="categorie-selection"
-        >
-          {projects?.map((project) => (
+        <select name="categorie-selection" id="categorie-selection">
+          <option value="">Catégories</option>
+          {categorieData?.map((project) => (
             <option key={project.id} value={project.id}>
-              {project.name}
+              {project.titre}
             </option>
           ))}
         </select>
+        <Link> Reconnaissance</Link>
+        <Link> Notre Bilan </Link>
         <input
           className="Search"
           type="text"
