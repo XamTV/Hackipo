@@ -26,7 +26,7 @@ function Home() {
         <About />
       </section>
       <CategorieComponent />
-      <section className="notremission">
+      <section id="notremission">
         <div className="nm1">
           <h2>Notre Mission</h2>
           <p>
