@@ -22,7 +22,7 @@ function EventList() {
     <>
       {categoryDetails?.map((detail) => (
         <>
-          <section className="EventListComponent">
+          <section className={`EventListComponent background-${id}`}>
             <div className="header-content">
               <h1> {category.titre}</h1>
 
@@ -30,6 +30,7 @@ function EventList() {
             </div>
             <img src={detail.logo} alt="" className="eventlist-logo" />
           </section>
+          <hr className={`line-${id}`} />
 
           <section className="EventListContainer">
             <h1>Liste des événements</h1>
@@ -44,7 +45,7 @@ function EventList() {
                   <Link
                     to={`/event/${event.id_event}`}
                     state={{ detail }}
-                    className="button"
+                    className={`button button-${id}`}
                   >
                     En savoir plus
                   </Link>
