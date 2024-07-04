@@ -27,6 +27,7 @@
   align-items: center;
   padding-left: 3rem;
   padding-right: 3rem;
+  padding-bottom: 4rem;
   grid-template-columns: 1fr 1fr;
 }
 
@@ -57,7 +58,7 @@
   }
   a {
     background-color: var(--second-color);
-    color: var(--white);
+    color: var(--first-color);
     padding: 0.6rem 6rem;
     border-radius: 5px;
   }

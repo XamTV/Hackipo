@@ -27,9 +27,17 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 4rem;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  width: 95vw;
+  margin: auto;
 }
 
+.line {
+  border: none;
+  border-bottom: 1.5px solid var(--second-color);
+  width: 50vw;
+}
 .member {
   display: flex;
   flex-direction: column;
