@@ -14,7 +14,7 @@ function EventList() {
     axios.get(`http://62.35.135.195:5000/get/cat${id}`).then((res) => {
       setCategoryDetails(Object.values(res.data));
     });
-  }, [categoryDetails, id]);
+  }, [id]);
 
   return (
     <>
