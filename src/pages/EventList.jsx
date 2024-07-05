@@ -22,7 +22,7 @@ function EventList() {
     <>
       {categoryDetails?.map((detail) => (
         <>
-          <section className={`EventListComponent background-${id}`}>
+          <section className={`EventListComponent thebackground-${id}`}>
             <div className="header-content">
               <h1> {category.titre}</h1>
 

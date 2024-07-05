@@ -37,9 +37,9 @@ function Event() {
           </header>
           <section className="event-description">
             <p className="para-event">{event.descr} </p>
-            <img src={event.image} alt="image lié a l'evenement" />
+            <img src={event.image} alt="logo lié a l'evenement" />
           </section>
-          <hr className={`advice-line line-${event.id_categorie}`} />
+          <hr className={`advice-line specline-${event.id_categorie}`} />
           <section className="advice-list">
             <h1 className="second-title-event">
               Conseils pour une Célébration Engagée et Inclusive
@@ -55,7 +55,7 @@ function Event() {
                       {conseil.nom}{" "}
                     </li>
                     <hr
-                      className={`advice-line-list line-${event.id_categorie}`}
+                      className={`advice-line-list specline-${event.id_categorie}`}
                     />
                   </>
                 ))}
