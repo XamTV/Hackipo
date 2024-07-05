@@ -30,16 +30,15 @@
 .header-content p {
   font-size: 1.2em;
   margin-top: 4rem;
-  color: black; /* Couleur du texte */
+  color: black;
 }
 
 .eventlist-logo {
   height: 600px;
   margin-left: 20px;
-  z-index: 1000; /* Assure que le logo est au-dessus des pseudo-éléments */
+  z-index: 1000;
 }
 
-/* Styles pour EventListContainer */
 .EventListContainer {
   display: flex;
   flex-direction: column;
@@ -166,34 +165,34 @@
 }
 
 /* Classes dynamiques pour les couleurs */
-.background-1::before {
+.thebackground-1::before {
   background-color: var(--fourth-color); /* Couleur personnalisée pour l'ID 1 */
 }
 
-.background-1::after {
+.thebackground-1::after {
   background-color: var(--first-color); /* Couleur personnalisée pour l'ID 1 */
 }
 
-.background-2::before {
+.thebackground-2::before {
   background-color: var(--fifth-color); /* Couleur personnalisée pour l'ID 2 */
 }
 
-.background-2::after {
+.thebackground-2::after {
   background-color: var(--first-color); /* Couleur personnalisée pour l'ID 2 */
 }
 
-.background-3::before {
+.thebackground-3::before {
   background-color: var(--sixth-color); /* Couleur personnalisée pour l'ID 2 */
 }
-.background-3::after {
+.thebackground-3::after {
   background-color: var(--first-color); /* Couleur personnalisée pour l'ID 2 */
 }
 
-.background-4::before {
+.thebackground-4::before {
   background-color: var(
     --seventh-color
   ); /* Couleur personnalisée pour l'ID 2 */
 }
-.background-4::after {
+.thebackground-4::after {
   background-color: var(--first-color); /* Couleur personnalisée pour l'ID 2 */
 }

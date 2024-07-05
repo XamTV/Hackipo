@@ -29,7 +29,9 @@ function Form() {
           des idées et des expériences à partager, n&apos;hésitez pas à nous
           contacter.
         </p>
-        <p>Ensemble, nous pouvons faire une différence significative.</p>
+        <p className="lastphrase">
+          Ensemble, nous pouvons faire une différence significative
+        </p>
       </div>
       <div className="form-container">
         <form
@@ -39,7 +41,7 @@ function Form() {
           <input
             className="name-container"
             required
-            placeholder="Name"
+            placeholder="Votre nom"
             name="lastName"
             value={contactForm.lastName}
             onChange={(e) => handleChangeForm(e)}
@@ -48,7 +50,7 @@ function Form() {
           <input
             className="firstname-container"
             required
-            placeholder="Firstname"
+            placeholder="Votre Prénom"
             name="firstName"
             value={contactForm.firstName}
             onChange={(e) => handleChangeForm(e)}
@@ -57,7 +59,7 @@ function Form() {
           <input
             className="mail-container"
             required
-            placeholder="Mail"
+            placeholder="Votre E-mail"
             name="email"
             value={contactForm.email}
             onChange={(e) => handleChangeForm(e)}
@@ -66,7 +68,7 @@ function Form() {
           <textarea
             required
             className="textarea-container"
-            placeholder="Your message"
+            placeholder="Votre message"
             name="message"
             id="messagearea"
             cols="3"
@@ -74,6 +76,28 @@ function Form() {
             value={contactForm.message}
             onChange={(e) => handleChangeForm(e)}
           />
+          <div className="checkboxes">
+            <input
+              name="isGoing"
+              type="checkbox"
+              className="checkboxes-input"
+            />
+            <p>
+              J&lsquo;accepte de recevoir des emails et des communications de
+              Harmonia
+            </p>
+          </div>
+          <div className="checkboxes">
+            <input
+              name="isGoing"
+              type="checkbox"
+              className="checkboxes-input"
+            />
+            <p>
+              J&lsquo;accepte de recevoir la Newletter Harmonia. Restez informé
+              des dernières tendances en matière d&lsquo;inclusion
+            </p>
+          </div>
 
           <button className="button-form" type="submit">
             Envoyer

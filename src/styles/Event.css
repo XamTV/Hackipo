@@ -9,13 +9,13 @@
 .event-description {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   padding: 2rem 3rem;
 }
 .event-description img {
-  max-width: 500px;
-  margin: 2rem 0rem 2rem 6rem;
+  max-width: 700px;
+  margin: 2rem 0rem 2rem 4rem;
   border-radius: 10px;
 }
 .para-event {
@@ -84,16 +84,16 @@
   color: var(--second-color);
 }
 
-.line-1 {
+.specline-1 {
   border-bottom: 1.5px solid var(--fourth-color);
 }
-.line-2 {
+.specline-2 {
   border-bottom: 1.5px solid var(--fifth-color);
 }
-.line-3 {
+.specline-3 {
   border-bottom: 1.5px solid var(--sixth-color);
 }
-.line-4 {
+.specline-4 {
   border-bottom: 1.5px solid var(--seventh-color);
 }
 
